@@ -1,0 +1,10 @@
+.footer{
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+  color:white;
+}
+
+
+.fa-github, .fa-linkedin {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+}
