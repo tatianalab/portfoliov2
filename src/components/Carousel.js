@@ -5,7 +5,8 @@ import Card from './Card'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
-import portfolio from '../assets/images/portfolio1.png';
+import profile from '../assets/images/profile1.png';
+import pwoveb from '../assets/images/pwoveb1.png';
 import spotitunes from '../assets/images/spotitunes1.png';
 import counterargument from '../assets/images/counterargument1.png';
 import equipy from '../assets/images/equipy1.png';
@@ -31,16 +32,16 @@ class Carousel extends React.Component{
         {
         id:0,
         title: "This Portfolio",
-        imgSrc: portfolio,
+        imgSrc: profile,
         tools: [react, webpack, css, bootstrap],
-        link: "link",
+        link: "http://tatianalab.dev",
         path:"/portfolio",
         selected: false
       },
       {
         id:1,
         title: "Pwovèb Kreyòl",
-        imgSrc: portfolio,
+        imgSrc: pwoveb,
         tools: [react, webpack, css],
         link: "http://pwovebkreyol.netlify.app",
         path:"/pwoveb",
@@ -51,8 +52,8 @@ class Carousel extends React.Component{
         title: "SpotiTunes",
         imgSrc: spotitunes,
         tools: [react, webpack, css,surge],
-        link: "link",
-        path:"/about",
+        link: "http://spotitunes.surge.sh/",
+        path:"/spotitunes",
         selected: false
       },
       {
@@ -60,8 +61,8 @@ class Carousel extends React.Component{
         title: "CounterArgument",
         imgSrc: counterargument,
         tools: [ruby, rails, sass, javascript, heroku],
-        link: "link",
-        path:'/about',
+        link: "http://www.counterargument.ca/",
+        path:'/counterargument',
         selected: false
       },
       {
@@ -69,8 +70,8 @@ class Carousel extends React.Component{
         title: "Rent Equipy",
         imgSrc: equipy,
         tools: [ruby,rails,sass,javascript,heroku],
-        link: "link",
-        path:'/about',
+        link: "http://rent-equipy.herokuapp.com/",
+        path:'/equipy',
         selected: false
       },
       {
@@ -78,8 +79,8 @@ class Carousel extends React.Component{
         title: "Miss Cocktail",
         imgSrc: misscocktail,
         tools:[ruby,rails,sass,javascript,heroku],
-        link: "link",
-        path:'/about',
+        link: "https://tati-misscocktail.herokuapp.com/",
+        path:'/cocktail',
         selected: false
       }
 

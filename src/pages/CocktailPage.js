@@ -6,28 +6,27 @@ import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import profile1 from '../assets/images/profile1.png'
-import profile2 from '../assets/images/profile2.png'
-import profile3 from '../assets/images/profile3.png'
-import profile4 from '../assets/images/profile4.png'
+import misscocktail1 from '../assets/images/misscocktail1.png'
+import misscocktail2 from '../assets/images/misscocktail2.png'
+import misscocktail3 from '../assets/images/misscocktail3.png'
 
-function PortfolioPage(props){
+function CocktailPage(props){
 
   return(
-<div>
+      <div>
         <div className="home-hero-container">
           <Nav />
           <Hero title={props.title} />
         </div>
         <Content>
         <h2>Description</h2>
-        I am using my portfolio website as a sandbox to test out everything I am learning in React
-        little by little. It is a SPA using React Router. Most of the components are hookless functions,
-        the App and projects "Carousel" are class components storing state. The Nav is a Hook component with useState
-        to determine whether or not to open the mobile nav.
-        I use the React Spring animation library to show project details onClik. I decided to use React Bootstrap for the
-        image carousel on each project page, as well as for the structure of the contact form. I am currently working on adding more
-        animation, nested routes and translating to french with i18n. Coming soon!
+        This basic Ruby on Rails CRUD application with MVC pattern was designed(minimally),
+        implemented and shipped to production in 2 days. It was my first Rails project during
+        Le Wagon coding bootcamp. The database has a simple one to many relationship. A user is
+        able to create a cocktail, while uploading an image and adding ingredients, update the
+        ingredients, visit each cocktail recipe, remove a cocktail and its ingredients/image.
+        A basic reviews controller was also added, belonging to a cocktail. The application was
+        deployed to Heroku.
         </Content>
 
         <Container fluid={true}>
@@ -37,28 +36,21 @@ function PortfolioPage(props){
             <Carousel.Item className="justify-content-center">
               <img
                 className="d-block carousel-img text-center"
-                src={profile1}
+                src={misscocktail1}
                 alt="Third slide"
               />
             </Carousel.Item>
             <Carousel.Item className="justify-content-center">
               <img
                 className="d-block carousel-img"
-                src={profile2}
+                src={misscocktail2}
                 alt="Third slide"
               />
           </Carousel.Item>
           <Carousel.Item className="justify-content-center">
               <img
                 className="d-block carousel-img"
-                src={profile3}
-                alt="Third slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item className="justify-content-center">
-              <img
-                className="d-block carousel-img"
-                src={profile4}
+                src={misscocktail3}
                 alt="Third slide"
               />
             </Carousel.Item>
@@ -68,10 +60,19 @@ function PortfolioPage(props){
     </Container>
 
 
+
+        <Content>
+        <h2>Features</h2>
+        <ul>
+        <li><b>IMAGE UPLOAD:</b> The Cloudinary gem was added in order to enable image uploading. </li>
+        <li><b>REVIEWS:</b> A reviews model was added with a view to create a new review belonging to a cocktail. </li>
+        </ul>
+        </Content>
+
     </div>
     );
 
 
 }
 
-export default PortfolioPage;
+export default CocktailPage;

@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Quattrocento:wght@400;700&family=Satisfy&display=swap');
+
+
+body {
+  font-family:'Quattrocento', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,h2,h3,h4,h5{
+  font-family: 'Oswald', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  font-family:'Quattrocento', serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.home-hero-container{
+  background-image: linear-gradient(to left top, #72c89e, #5fb99c, #4faa99, #449a94, #3d8b8c, #3e8895, #47859b, #55819e, #7886ac, #9d89af, #bd8da9, #d3969e);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*.carousel-container{
+  background:#ececec;
+}*/
+
+.g-card{
+  margin:20px;
 }
+
+.g-card-image{
+  border:none;
+  width:200px;
+  height: 320px;
+  transition:all 0.5s ease;
+}
+
+.g-card-image:hover {
+  transform: scale(1.1);
+}
+
+.g-card-info{
+  margin-top: 10px;
+  min-height: 100px;
+}
+
+.g-card-title{
+  font-size:24px;
+  margin:0px;
+}
+
+.g-card-sub-title{
+  font-size:16px;
+  margin:0;
+}
+
+.g-card-tool-icon{
+  width:30px;
+  height: 30px;
+  margin-right:5px;
+  /*box-shadow: 5px 5px 16px 5px rgba(0,0,0,0.16)*/
+}
+
+.g-card-link{
+  text-decoration: none;
+  color:#242424;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.success-msg{
+  color: #57a773;
+  padding:10px 15px;
+}
+.err-msg{
+  color: #ee6252;
+  padding:10px 15px;
+}
+
+.carousel-img{
+  border:none;
+  width:200px;
+  height: 320px;
+  margin:22px auto;
+}
+
+.accordion-card-header{
+  background-image: linear-gradient(to left top, #72c89e, #5fb99c, #4faa99, #449a94, #3d8b8c);
+  transition:all 0.3s ease;
+}
+
+.accordion-card-header:hover{
+  background:#7886ac;
+  cursor:pointer;
+}
+

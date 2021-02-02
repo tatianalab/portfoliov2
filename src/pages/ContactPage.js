@@ -1,71 +1,97 @@
-import React from 'react'
+import React from 'react';
+import * as emailjs from 'emailjs-com';
 import Hero from '../components/Hero/Hero';
-import Content from '../components/Content'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+import Nav from '../components/Nav/Nav';
+import Form from 'react-bootstrap/Form';
+
+import './ContactPage.css';
 
 class ContactPage extends React.Component{
   constructor(props){
-    super(props);
-    this.state = {
-      name:'',
-      email:'',
-      message: '',
-      disabled: false,
-      emailSent: null
+    super(props)
+    this.state= {
+      name: "",
+      subject:"",
+      email: "",
+      message:"",
+      emailSent:null
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange = (event) => {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
-
+  handleChange = (e) => {
     this.setState({
-      [name]:value
-    })
+      [e.target.name]: e.target.value
+    });
   }
 
-  handleSubmit = (event) => {
-    event.prevetDefault();
-    this.setState({
-      disabled:true
-    })
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_64la3dm', 'template_qf91iyo','.contact-form','user_eZC4b4nANEXPZwpXJw4VO')
+      .then((result) => {
+        if(result.text === "OK"){
+          this.setState({
+            name: "",
+            subject:"",
+            email: "",
+            message:"",
+            emailSent:true
+          })
+        }else {
+          this.setState({
+            emailSent:false
+          })
+        }
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
   }
 
   render(){
     return(
       <div>
-        <Hero title={this.props.title} />
-        <Content>
+      <div className="home-hero-container">
+      <Nav/>
+      <Hero title={this.props.title} text={this.props.text} />
+      </div>
+      <Form onSubmit={this.handleSubmit.bind(this)}
+       className="contact-form"
+      >
+      <Form.Group className='form-inputs'>
+      <Form.Label className='form-label' >Name:</Form.Label>
+      <Form.Control className='form-input' type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange} />
+      </Form.Group>
 
-          <Form onSubmit={this.handleSubmit}>
-            <Form.Group>
-              <Form.Label htmlFor="full-name">Full Name</Form.Label>
-              <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
-            </Form.Group>
+      <Form.Group className='form-inputs'>
+      <Form.Label className='form-label'htmlFor="email">Email:</Form.Label>
+      <Form.Control className='form-input' type="email" name="email" id="email" value={this.state.email} onChange={this.handleChange} />
+      </Form.Group>
 
-              <Form.Group>
-                <Form.Label htmlFor="email">Email</Form.Label>
-                <Form.Control id="email" name="email" type="text" value={this.state.email} onChange={this.handleChange} />
-              </Form.Group>
+      <Form.Group className='form-inputs'>
+      <Form.Label className='form-label'>Subject:</Form.Label>
+      <Form.Control className='form-input' type="text" name="subject" id="subject" value={this.state.subject} onChange={this.handleChange} />
+      </Form.Group>
 
-              <Form.Group>
-                <Form.Label htmlFor="message">Message</Form.Label>
-                <Form.Control id="message" name="message" as="textarea"rows="5" value={this.state.message} onChange={this.handleChange} />
-              </Form.Group>
+      <Form.Group className='form-inputs'>
+      <Form.Label className='form-label'>Message:</Form.Label>
+     <Form.Control as="textarea" rows="5" className='form-input'  name="message" id="message" value={this.state.message} onChange={this.handleChange} />
+      </Form.Group>
 
-              <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
-                Send
-              </Button>
-
-              {this.state.emailSent ===true && <p className="d-inline success-msg">Email sent</p>}
-              {this.state.emailSent ===false && <p className="d-inline err-msg">Email not sent</p>}
-          </Form>
-        </Content>
+        <button className='form-input-btn' type='submit'>
+          SEND!
+        </button>
+        {this.state.emailSent === true && <p className="d-inline success-msg">Message Sent!</p>}
+        {this.state.emailSent === false && <p className="d-inline err-msg">Message Not Sent- try again</p>}
+      </Form>
       </div>
       )
+
+
   }
 }
 
 export default ContactPage;
+

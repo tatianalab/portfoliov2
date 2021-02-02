@@ -11,11 +11,11 @@ function Footer(){
       <Container fluid={true}>
         <Row className="border-top justify-content-between p-3">
           <Col className="p-0" md={3} sm={12}>
-          <i className="fab fa-github" />
-          <i className="fab fa-linkedin" />
+          <a href="https://github.com/tatianalab" target="_blank"><i className="fab fa-github" /></a>
+          <a href="https://www.linkedin.com/in/tatianalab/" target="_blank"><i className="fab fa-linkedin" /></a>
           </Col>
           <Col className="p-0 d-flex justify-content-end" md={3}>
-            <p>Designed and Built by Tatiana Labrousse</p>
+            <p>Designed and Built by<span id="signature"> Tatiana Labrousse</span></p>
           </Col>
         </Row>
       </Container>

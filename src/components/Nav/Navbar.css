@@ -19,6 +19,7 @@
 }
 
 .navbar-logo {
+  font-family:'Satisfy', cursive;
   color: #fff;
   justify-self: start;
   margin-left:0;
@@ -67,14 +68,18 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid #fff;
+  border-bottom: 6px solid #449a94;
   transition: all 0.2s ease-out;
   text-decoration:none;
-  color:#fff;
+  color: #449a94;
 }
 
 .fa-bars {
   color: #fff;
+}
+
+.fa-bars:hover{
+  color: #449a94;
 }
 
 .nav-links-mobile {
@@ -119,7 +124,8 @@
   }
 
   .nav-links:hover {
-    background-color: #fff;
+
+    background-color: #449a94;
     color: #242424;
     border-radius: 0;
   }
@@ -144,6 +150,10 @@
   .fa-times {
     color: #fff;
     font-size: 2rem;
+  }
+
+  .fa-times:hover{
+    color:#449a94;
   }
 
   .nav-links-mobile {

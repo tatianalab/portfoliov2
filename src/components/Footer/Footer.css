@@ -3,8 +3,22 @@
   color:white;
 }
 
+.footer a{
+  color:white;
+}
+
 
 .fa-github, .fa-linkedin {
   margin-left: 0.5rem;
   font-size: 2rem;
 }
+
+.fa-github:hover, .fa-linkedin:hover{
+  color:#449a94;
+}
+
+#signature{
+  font-family:'Satisfy', cursive;
+}
+
+
