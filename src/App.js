@@ -1,8 +1,10 @@
-import './App.css';
 import React from 'react'
+import './App.css';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+
 import Container from 'react-bootstrap/Container'
 
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+
 import Footer from './components/Footer/Footer'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'

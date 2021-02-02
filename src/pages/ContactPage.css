@@ -64,4 +64,13 @@
   transform:scale(0.9);
 }
 
+.success-msg{
+  color: #57a773;
+  padding:10px 15px;
+}
+.err-msg{
+  color: #ee6252;
+  padding:10px 15px;
+}
+
 
