@@ -20,19 +20,11 @@ code {
 }
 
 .home-hero-container{
-  background-image: linear-gradient(to left top, #72c89e, #5fb99c, #4faa99, #449a94, #3d8b8c, #3e8895, #47859b, #55819e, #7886ac, #9d89af, #bd8da9, #d3969e);
+  /*background-image: linear-gradient(to left top, #72c89e, #5fb99c, #4faa99, #449a94, #3d8b8c, #3e8895, #47859b, #55819e, #7886ac, #9d89af, #bd8da9, #d3969e);*/
 }
 
 
 
-
-
-.carousel-img{
-  border:none;
-  width:200px;
-  height: 320px;
-  margin:22px auto;
-}
 
 .accordion-card-header{
   background-image: linear-gradient(to left top, #72c89e, #5fb99c, #4faa99, #449a94, #3d8b8c);

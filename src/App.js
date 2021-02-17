@@ -15,6 +15,7 @@ import CocktailPage from './pages/CocktailPage'
 import EquipyPage from './pages/EquipyPage'
 import CounterArgumentPage from './pages/CounterArgumentPage'
 import SpotitunesPage from './pages/SpotitunesPage'
+import AshtongagnonPage from './pages/AshtongagnonPage'
 
 class App extends React.Component{
   constructor(props){
@@ -57,6 +58,9 @@ class App extends React.Component{
        spotitunes: {
         title: 'Spotitunes',
       },
+      ashtongagnon: {
+        title: 'Ashton Gagnon Avocats',
+      },
     }
   }
 
@@ -75,6 +79,7 @@ class App extends React.Component{
               <Route path="/equipy" render={() => <EquipyPage title={this.state.equipy.title} />} />
               <Route path="/counterargument" render={() => <CounterArgumentPage title={this.state.counterargument.title} />} />
               <Route path="/spotitunes" render={() => <SpotitunesPage title={this.state.spotitunes.title} />} />
+              <Route path="/ashtongagnon" render={() => <AshtongagnonPage title={this.state.ashtongagnon.title} />} />
             </Switch>
 
           <Footer />
